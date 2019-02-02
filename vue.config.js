@@ -1,4 +1,3 @@
-const portfinder = require("portfinder");
 const backend = require("./build/dev-server");
 
 module.exports = {
