@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lint:commit": "git diff --cached --name-only | grep .js$ | xargs eslint",
+    "lint:commit": "git diff --cached --name-only --diff-filter=AM | grep .js$ | xargs eslint",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit"
