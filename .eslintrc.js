@@ -12,6 +12,7 @@ module.exports = {
     "plugin:vue/recommended",
     // https://github.com/standard/standard/blob/master/docs/RULES-en.md
     "standard",
+    "prettier",
     "plugin:prettier/recommended"
   ],
   // required to lint *.vue files
@@ -24,6 +25,12 @@ module.exports = {
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
     "import/no-webpack-loader-syntax":
       process.env.NODE_ENV === "production" ? "error" : "off",
-    singleQuote: true
+    "prettier/prettier": [
+      "error",
+      {
+        singleQuote: true, //シングルクォーテーションのフォーマット 参考）https://prettier.io/docs/en/options.html#quotes
+        semi: false //セミコロンのフォーマット 参考）https://prettier.io/docs/en/options.html#semicolons
+      }
+    ]
   }
 };
